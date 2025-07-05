@@ -1,7 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import "../style/Nav.css";
 
 function Nav() {
+  const menuToggleRef = useRef(null);
+
+  // Close mobile menu when a nav item is clicked
+  const handleNavItemClick = () => {
+    if (menuToggleRef.current) {
+      menuToggleRef.current.checked = false;
+    }
+  };
+
   return (
     <nav className="navbar">
       {/* Optional animated wave background */}
@@ -15,7 +25,12 @@ function Nav() {
 
       <div className="logo animated-text">Portfolio</div>
 
-      <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        className="menu-toggle"
+        ref={menuToggleRef}
+      />
       <label htmlFor="menu-toggle" className="menu-icon">
         <span className="bar"></span>
         <span className="bar"></span>
@@ -23,10 +38,18 @@ function Nav() {
       </label>
 
       <div className="nav-links">
-        <Link to="/"><div className="nav-item">Home</div></Link>
-        <Link to="/skills"><div className="nav-item">Skills</div></Link>
-        <Link to="/about"><div className="nav-item">About</div></Link>
-        <Link to="/contact"><div className="nav-item">Contact</div></Link>
+        <Link to="/" onClick={handleNavItemClick}>
+          <div className="nav-item">Home</div>
+        </Link>
+        <Link to="/skills" onClick={handleNavItemClick}>
+          <div className="nav-item">Skills</div>
+        </Link>
+        <Link to="/about" onClick={handleNavItemClick}>
+          <div className="nav-item">About</div>
+        </Link>
+        <Link to="/contact" onClick={handleNavItemClick}>
+          <div className="nav-item">Contact</div>
+        </Link>
       </div>
     </nav>
   );

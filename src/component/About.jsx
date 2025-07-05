@@ -35,7 +35,7 @@ function About() {
           <h1>Annamacharya Institute of Technology and Science</h1>
           <p>Bachelor of Technology</p>
           <p>Computer Science and Engineering</p>
-          <p>Kurnool, India</p>
+          <p>Tirupati, India</p>
           <p>2020 - 2024</p>
         </div>
 

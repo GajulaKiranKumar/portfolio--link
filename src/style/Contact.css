@@ -20,7 +20,6 @@ body {
   margin-bottom: 40px;
 }
 
-
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -54,6 +53,7 @@ body {
 .contact-card h2 {
   margin: 0;
   color: #ffcc00;
+  font-size: 20px;
 }
 
 .contact-card p,
@@ -62,8 +62,8 @@ body {
   color: #ccc;
   word-break: break-word;
   text-decoration: none;
+  font-size: 14px;
 }
-
 
 .form-section {
   background: #2c2f48;
@@ -76,6 +76,7 @@ body {
   margin-bottom: 20px;
   color: #ffcc00;
   text-align: center;
+  font-size: 24px;
 }
 
 form {
@@ -86,6 +87,7 @@ form {
 form label {
   margin-top: 15px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 form input,
@@ -118,4 +120,94 @@ form button {
 
 form button:hover {
   background-color: #e6b800;
+}
+
+/* ============================= */
+/* Mobile Responsive Styles */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .contact-page {
+    padding: 30px 15px;
+  }
+
+  .contact-card {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .contact-card img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .contact-card h2 {
+    font-size: 18px;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 13px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-section h2 {
+    font-size: 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  form button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .contact-card img {
+    margin: 0 0 10px 0;
+  }
+
+  .contact-card h2 {
+    font-size: 16px;
+  }
+
+  .form-section h2 {
+    font-size: 18px;
+  }
+
+  form label {
+    font-size: 13px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
 }

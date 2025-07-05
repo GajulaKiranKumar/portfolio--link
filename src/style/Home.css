@@ -73,7 +73,6 @@
   gap: 2rem;
 }
 
-
 .intro-text {
   flex: 1;
   min-width: 280px;
@@ -92,7 +91,6 @@
 .highlight {
   color: #ffdf6b;
 }
-
 
 .typing-effect {
   font-size: 1.5rem;
@@ -154,28 +152,54 @@
   color: #ffdf6b;
 }
 
-
 .profile-image {
   flex: 1;
   min-width: 280px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+/* Glowing border effect */
 .profile-image img {
   width: 100%;
   max-width: 350px;
   height: auto;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-  transition: transform 0.5s ease;
+  box-shadow:
+    0 0 15px 3px rgba(255, 223, 107, 0.6),
+    0 0 30px 8px rgba(255, 223, 107, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  border: 3px solid rgba(255, 223, 107, 0.6);
 }
 
 .profile-image img:hover {
   transform: scale(1.05);
+  box-shadow:
+    0 0 20px 5px #ffdf6b,
+    0 0 40px 15px #ffdf6b;
 }
 
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .intro {
+    font-size: 2.2rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .typing-effect {
+    font-size: 1.3rem;
+  }
+
+  .tech-stack li {
+    font-size: 0.95rem;
+  }
+}
 
 @media (max-width: 650px) {
   .intro-wrapper {
@@ -192,6 +216,20 @@
   }
 
   .typing-effect {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .intro {
+    font-size: 1.8rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .typing-effect {
+    font-size: 1rem;
   }
 }
